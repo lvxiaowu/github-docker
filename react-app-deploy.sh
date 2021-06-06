@@ -1,6 +1,6 @@
 echo -e "---------docker Login--------"
 # docker login --username=$1 registry.cn-hangzhou.aliyuncs.com --password=$2
-echo ~/dockerPwd.txt | docker login --username $1 registry.cn-hangzhou.aliyuncs.com --password-stdin
+cat  ~/dockerPwd.txt | docker login --username $1 registry.cn-hangzhou.aliyuncs.com --password-stdin
 echo -e "---------docker Stop--------"
 docker stop react-app
 echo -e "---------docker Rm--------"
